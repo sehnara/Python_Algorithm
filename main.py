@@ -90,7 +90,71 @@ print(data2)
 # 4. 입출력
 # 1) input() : 한 줄의 문자열 입력
 # 2) list(map(int, input().split())) **
-n, m, k = map(int, input().split())
-print(n, m, k)
+# n, m, k = map(int, input().split())
+# print(n, m, k)
 # 3) sys.stdin.readline().rstrip() : 한 줄씩 입력, import sys 수반
 # 4) 출력 : print(f"정답은 {answer}입니다.")
+
+# ------------------------------------------------------------------
+
+# 내장함수 / itertools / heapq / bisect / collections / math
+
+# 1. 내장함수(sum, min, max, eval, sorted)
+result_sum = sum([1, 2, 3])
+print(result_sum)
+
+result_min = min(1, 2, 3, 4, 5, 6)
+print(result_min)
+
+# eval : 문자열 형식의 수식을 계산
+result_eval = eval('3+7-2')
+print(result_eval)
+
+# 2. intertools : 반복되는 데이터 처리
+
+# 1) permutations : iterable 자료형에서 n개 뽑았을 나오는 경우의 수 모두 뽑아줌
+from itertools import permutations
+data = ['a', 'b', 'c']
+result_permu = list(permutations(data, 3))
+print('🐤', result_permu)
+
+# 2) combinations : iterable 자료형에서 n개를 뽑았을 때 '순서를 고려하지 않은' 경우의 수
+# 2-1) combinations_with_replacement : combintions에서 중복만 허용
+from itertools import combinations
+result_comb =list(combinations(data, 2))
+print(result_comb)
+
+# 3) product : iterable 자료형에서 n개를 뽑았을 때 '중복하여' 경우의 수
+from itertools import product
+result_prod = list(product(data, repeat=2))
+print(result_prod)
+
+
+# 3. heapq : 힙 기능 위해 사용
+import heapq
+def heapsort(iterable):
+    h = []
+    result_heap = []
+    for value in iterable:
+        heapq.heappush(h, value)
+    for i in range(len(h)):
+        result_heap.append(heapq.heappop(h))
+    return result_heap
+
+result = heapsort([1, 55, 2, 3, 4, 22, 12 ,5,])
+print(result)
+
+# 4. bisect : 이진탐색, 정렬된 배열에서 특정한 원소를 찾아야 할 때 효과적
+from bisect import bisect_left, bisect_right
+arr_bis = [1, 2, 3, 4, 5, 9]
+x = 4
+print(bisect_left(a, x))
+print(bisect_right(a, x))
+
+# * 특정한 범위 내의 원소 개수 구하는데 효과적 : count_by_range
+def count_by_range(arr, leftValue, rightValue):
+    left = bisect_left(arr,leftValue)
+    right = bisect_right(arr, rightValue)
+    return right-left
+
+print("🐯",count_by_range(arr_bis, 2, 5))
