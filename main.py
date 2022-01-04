@@ -93,4 +93,4 @@ print(data2)
 n, m, k = map(int, input().split())
 print(n, m, k)
 # 3) sys.stdin.readline().rstrip() : 한 줄씩 입력, import sys 수반
-# 4) 출력 : print(f"정답은 {answer}입니다.")
+# 4) 출력 : print(f"정답은 {answer}입니다")
