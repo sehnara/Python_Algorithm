@@ -46,3 +46,31 @@ print(brr.count(3))
 # 특정값 삭제
 brr.remove(4)
 print(brr)
+
+# ------------------------------------------------------------------
+# 튜플
+# 1. 한 번 선언되면 변경 X
+# 2. 소괄호 선언 ()
+a = (1,2,3,4)
+print(a)
+
+# dict
+data = dict()
+data["사과"] = 'Apple'
+data["바나나"] = 'Banana'
+print(data["사과"])
+# 1) 메서드
+# keys(), values()
+
+# Iterable 자료형
+# 순차적인 정보를 담는 자료형
+# in 문법 사용 가능
+
+# SET **
+# 1. 중복 허용 X
+# 2. 순서없음
+# 3. |, &, - : 합, 교, 차집합
+# 4. add(4), update([5,6]), remove(3)
+data2 = set([11,11,11,12,13,13])
+print(data2)
+
