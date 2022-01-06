@@ -14,7 +14,7 @@ print(arr)
 
 # 2. slice
 brr = [1,2,3,4,5,4,2,9]
-print(brr[2:4])
+print('🎱',  brr[2:4])
 
 # 3. comprehension
 crr = [i for i in range(20) if i%2 == 1]
@@ -124,7 +124,7 @@ from itertools import combinations
 result_comb =list(combinations(data, 2))
 print(result_comb)
 
-# 3) product : iterable 자료형에서 n개를 뽑았을 때 '중복하여' 경우의 수
+# 3) product : iterable 자료형에서 n개를 뽑았을 때 '중복하여' 경우의 수!
 from itertools import product
 result_prod = list(product(data, repeat=2))
 print(result_prod)
@@ -158,3 +158,36 @@ def count_by_range(arr, leftValue, rightValue):
     return right-left
 
 print("🐯",count_by_range(arr_bis, 2, 5))
+
+
+# collections : deque(큐), counter
+# 리스트는 가장 앞쪽에 원소를 추가, 삭제할 때 O(N)이지만, 큐는 O(1) **
+# popleft, pop, appendleft(x), append(x)
+from collections import deque
+data_deque = deque([2, 3, 4]);
+data_deque.appendleft(11)
+data_deque.append(44)
+print('🏀🏀🏀🏀', list(data_deque))
+
+# Counter : iterable 자료형에서 원소가 총 몇 번 나왔는지 확인
+from collections import Counter
+data_Counter = Counter(['red', 'orange', 'yellow', 'green', 'blue', 'red'])
+print(data_Counter['red'])
+print(dict(data_Counter))
+
+
+# math : 팩토리얼, 제곱근, 최대공약수
+
+# factorial(x)
+import math
+print(math.factorial(5))
+
+# sqrt(x) : 제곱근 반환
+# gcd(x,y) : 최대 공약수
+# pi, e : 파이나 자연상수
+
+
+
+
+
+
