@@ -107,7 +107,7 @@ result_min = min(1, 2, 3, 4, 5, 6)
 print(result_min)
 
 # eval : 문자열 형식의 수식을 계산
-result_eval = eval('3+7-2')
+result_eval = eval('3+7-2-1')
 print(result_eval)
 
 # 2. intertools : 반복되는 데이터 처리
