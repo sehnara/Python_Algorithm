@@ -167,7 +167,7 @@ from collections import deque
 data_deque = deque([2, 3, 4]);
 data_deque.appendleft(11)
 data_deque.append(44)
-print('🏀🏀🏀🏀', list(data_deque))
+print( list(data_deque))
 
 # Counter : iterable 자료형에서 원소가 총 몇 번 나왔는지 확인
 from collections import Counter
