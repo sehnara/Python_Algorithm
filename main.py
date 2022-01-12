@@ -124,7 +124,7 @@ from itertools import combinations
 result_comb =list(combinations(data, 2))
 print(result_comb)
 
-# 3) product : iterable 자료형에서 n개를 뽑았을 때 '중복하여' 경우의 수!
+# 3) product : iterable 자료형에서 n개를 뽑았을 때 '중e복하여' 경우의 수!
 from itertools import product
 result_prod = list(product(data, repeat=2))
 print(result_prod)
